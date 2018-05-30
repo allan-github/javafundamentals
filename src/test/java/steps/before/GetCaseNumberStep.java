@@ -15,11 +15,17 @@ public class GetCaseNumberStep {
 
         // Declare variables
         String caseId = "RR1";
-        String endPoint = "http://voaintegration.cloudapp.net:48081/api/rose/GetCaseNo";
+        String baseUrl = "http://voaintegration.cloudapp.net:48081";
+
+        // Basic example of mocking
+        boolean mock = true;
+        if (mock) {baseUrl = "http://localhost:9999";}
+
+        String resource = "/api/rose/GetCaseNo";
+        String endPoint = baseUrl + resource;
 
         // Build Request
-        requestSpec = new RequestSpecBuilder().setBaseUri(endPoint).build();
-        requestSpec = requestSpec.queryParams("CaseID", caseId);
+        requestSpec = new RequestSpecBuilder().setBaseUri(endPoint).build().queryParams("CaseID", caseId);
 
         // Execute
         response = RestAssured.given().spec(requestSpec).get();
