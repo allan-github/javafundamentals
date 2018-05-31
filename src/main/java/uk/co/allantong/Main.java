@@ -14,8 +14,10 @@ Class: Camel back, but all words are Proper
 // The namespace/package this class is assigned to
 package uk.co.allantong;
 
+
 // Reference to the Calculator by fully qualifying its path
 import uk.co.allantong.libraries.Calculator;
+
 
 public class Main {
 

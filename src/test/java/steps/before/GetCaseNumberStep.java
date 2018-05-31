@@ -18,8 +18,7 @@ public class GetCaseNumberStep {
         String baseUrl = "http://voaintegration.cloudapp.net:48081";
 
         // Basic example of mocking
-        boolean mock = true;
-        if (mock) {baseUrl = "http://localhost:9999";}
+        //String baseUrl = "http://localhost:9999";
 
         String resource = "/api/rose/GetCaseNo";
         String endPoint = baseUrl + resource;
